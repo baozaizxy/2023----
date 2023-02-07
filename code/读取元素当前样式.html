@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+		<title></title>
+        <style type="text/css">
+            #box1{
+                width: 100px;
+                height: 100px ;
+                background-color: red;
+            }
+        </style>  
+        
+        <script type="text/javascript">
+            window.onload = function(){
+                var box1 = document.getElementById("box1");
+                var btn01 = document.getElementById("btn01");
+                btn01.onclick = function(){
+                // getComputedStyle(元素,null) 获取元素当前显示的样式
+                //返回对象。对象中封装了当前的样式
+                // 只读，无法修改 修改通过style属性
+                console.log(getComputedStyle(box1,null))
+                alert(getComputedStyle(box1,null).backgroundColor)
+                // 获取元素当前显示的样式（也是只读） 只有IE8能用 调了半天 气死了
+                //  语法：元素.currentStyle.样式名
+                // alert(box1.currentStyle.width);              
+                };
+            }
+        </script>
+        
+	</head>
+	<body>
+		<div id="box1"></div>
+		<button type="button" id="btn01">读取样式</button>
+	</body>
+</html>
+
+
+变量没找到报错 属性没找到返回undefined 
+此性质可用于if else等
+if(window.getComputedStyle){
+    return getComputedStyle(obj,null)[name];
+}else{
+    return obj.currentStyle[name];
+}
