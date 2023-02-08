@@ -165,9 +165,103 @@ Node
 			- npm install 下载当前项目所依赖的包
 			- npm install 包名 -g 全局安装包（全局安装的包一般都是一些工具）
 
+- 包结构 
+	本质就是压缩文件 解压以后还原为目录
+	符合规范的目录 应包括如下文件
+		- package.json 描述文件（必须有）
+		- bin 可执行二进制文件
+		- lib js代码
+		- doc 文档
+		- test 单元测试
 
+	- package.json	
+			- 它是一个json格式的文件，在它里面保存了包各种相关的信息
+				name 包名
+				version 版本
+				dependencies 依赖（分为开发依赖和生产依赖）
+				main 包的主要的文件
+				bin 可执行文件
+				keywords 关键字（意味着包可以被查询到）
+				
+- npm（Node Package Manager node的包管理器）
+		- 通过npm可以对node中的包进行上传、下载、搜索等操作
+		- npm会在安装完node以后，自动安装
+		- npm的常用指令
+			npm -v 查看npm的版本
+			npm version 查看所有模块的版本
+			npm search 包名
+			npm init 初始化项目（创建package.json）
+			npm i/install 包名 安装指定的包
+			npm i/install 包名 --save 安装指定的包并将其添加为依赖
+			npm i/install 包名 -g 全局安装（一般都是一些工具）
+			npm i/install 安装当前项目所依赖的包（因此git下载项目无需理睬node_module，上传也无需上传node_module）
+			npm s/search 包名 搜索包	
+			npm r/remove 包名 删除一个包
+			
+文件系统（File System）
+	- Buffer（缓冲区）
+		- Buffer和数组的结构的非常类似，Buffer是用来存储二进制数据的
+		- Buffer的方法
+			- Buffer.from(字符串)
+				- 将一个字符串中内容保存到一个buffer中
+			- buf.toString()
+				- 将buffer转换为一个字符串
+			- Buffer.alloc(size)
+				- 创建一个指定大小的buffer对象
+			- Buffer.allocUnsafe(size)
+				- 创建一个指定大小的buffer对象，可以包含敏感数据
+				
+				
+	- fs模块
+		- 在Node通过fs模块来对系统中的文件进行操作，fs模块是node中已经继承好了，不需要在使用npm下载，直接引入即可
+		- 引入fs
+			var fs = require("fs");
+		- fs模块中的大部分操作都提供了两种方法，同步方法和异步方法
+			同步方法带sync
+			异步方法没有sync，都需要回调函数
+			
+		- 写入文件
+			1.同步写入
+			2.异步写入
+			3.简单写入
+			4.流式写入
+			
+		- 读取文件
+			1.同步读取
+			2.异步读取
+			3.简单读取
+			4.流式读取
+			
+		- 方法
+			- 打开文件
+				fs.open(path, flags[, mode], callback)
+				fs.openSync(path, flags[, mode])
+				
+			- 读写文件
+				fs.write(fd, string[, position[, encoding]], callback)
+				fs.writeSync(fd, string[, position[, encoding]])
+				
+				fs.read(fd, buffer, offset, length, position, callback)
+				fs.readSync(fd, buffer, offset, length, position)
+				
+			- 关闭文件
+				fs.close(fd,callback)
+				fs.closeSync(fd);
+				
+			- 简单文件读取和写入
+				fs.writeFile(file, data[, options], callback)
+				fs.writeFileSync(file, data[, options])
+				
+				fs.readFile(path[, options], callback)
+				fs.readFileSync(path[, options])
+				
+				
+			- 流式文件读取和写入
+				- 流式读取和写入适用于一些比较大的文件
+					fs.createWriteStream(path[, options])
+					fs.createReadStream(path[, options])
 ​		arguments	
-​			
+​		JSON文件不能写注释
 ​			
 ​			
 ​			
