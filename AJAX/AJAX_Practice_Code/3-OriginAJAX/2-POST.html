@@ -27,10 +27,11 @@
             const xhr = new XMLHttpRequest();
             //2. 初始化 设置请求类型与URL
             xhr.open('POST','http://127.0.0.1:8000/server');
-            //设置请求头
-            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
-            //设置自定义请求头
-            xhr.setRequestHeader('name','superLmk');
+            // //设置请求头
+            // xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+            // Content-Type 
+            // //设置自定义请求头
+            // xhr.setRequestHeader('name','superLmk');
 
             //3.发送
             xhr.send('a=100&b=200&c:300');
@@ -42,7 +43,15 @@
                 if (xhr.readyState === 4) {
                     if (xhr.status >= 200 && xhr.status < 300) { 
                         //处理服务端返回的结果
-                        result.innerHTML = xhr.response;
+                        // result.innerHTML = xhr.response;
+                        // console.log(xhr.response);
+                        //1. 手动对数据进行一个转换
+                        let data = JSON.parse(xhr.response);
+                        console.log(data);
+                        result.innerHTML = data.name;
+                        // //2. 自动转换:直接设置ajax响应数据类型
+                        // console.log(xhr.response);
+                        // result.innerHTML = xhr.response.name;
                     }
                 }
             }
