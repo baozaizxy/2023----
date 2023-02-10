@@ -18,11 +18,13 @@ app.get('/server',(request, response)=>{
 });
 
 app.post('/server',(request, response)=>{
-    //设置响应头  设置允许跨域
-    response.setHeader('Access-Control-Allow-Origin','*');
+    //设置响应头 设置允许跨域
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    //遇到自定义响应头时可以设置
+    response.setHeader('Access-Control-Allow-Headers', '*');
     
     //设置响应体
-    response.send('HELLO AJAX POST');
+    response.send('HELLO AJAX');
 
 });
 
