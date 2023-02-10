@@ -20,7 +20,7 @@
 #### 1.3.1 AJAX的优点
 
 1. 可以无刷新页面与服务端进行通信
-2. 允许你根据用户事件来更新部分页面内容
+2. 允许你根据用户事件（eg:鼠标键盘事件、表单事件、文档事件等）来更新部分页面内容
 
 #### 1.3.2 AJAX 的缺点
 
@@ -34,13 +34,38 @@
 
 **请求报文**
 
-行  GET / POST
+行  POST url地址 HTTP版本
 
-头  HOST / Host / Cookie / Content-type / User-Agent
+头  HOST：atguigu.com
+    Cookie: name=guigu
+    Content-type: application/x-www-form-urlencoded 
+    User-Agent: chrome 83
 
 空行
 
-体 username=admin&password=admin
+体 Get请求 请求体为空
+   POST请求 请求体可以不为空
+   username=admin&password=admin
+
+**响应报文**
+
+行  HTTP/1.1 200 OK 
+      404找不到
+      403被禁止
+      401未授权
+      500内部错误
+      2开头ok 3开头重载 4开头访问失败 5开头后端问题
+头  Content-Type: text/html;charset=utf-8
+    Content-length: 2048
+    Content-encoding: gzip(压缩方式)
+空行
+体   <html>
+         <head>
+         </head>
+         <body>
+            <h1>郑欣悦</h1>
+         </body>
+     </html>
 
 ## 第二章 jQuery中的AJAX
 
