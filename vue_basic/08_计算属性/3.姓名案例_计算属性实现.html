@@ -40,12 +40,14 @@
 				firstName:'张',
 				lastName:'三',
 				x:'你好'
+				// 默认data中写的都是属性
 			},
 			methods: {
 				demo(){
 					
 				}
 			},
+			// 计算属性
 			computed:{
 				fullName:{
 					//get有什么作用？当有人读取fullName时，get就会被调用，且返回值就作为fullName的值
@@ -59,6 +61,7 @@
 					set(value){
 						console.log('set',value)
 						const arr = value.split('-')
+						// const用法？这玩意还能当数组？
 						this.firstName = arr[0]
 						this.lastName = arr[1]
 					}

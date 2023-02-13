@@ -8,10 +8,12 @@
 		<style>
 			*{
 				margin-top: 20px;
+				/* 通配符，所有元素都可以使用 */
 			}
 			.demo1{
 				height: 50px;
 				background-color: skyblue;
+				/* class使用 */
 			}
 			.box1{
 				padding: 5px;
@@ -26,6 +28,7 @@
 				height: 200px;
 				background-color: peru;
 				overflow: auto;
+				/* 容器不够大的时候自然出现滚动条 */
 			}
 			li{
 				height: 100px;
@@ -44,15 +47,15 @@
 		-->
 		<!-- 准备好一个容器-->
 		<div id="root">
-			<h2>欢迎来到{{name}}学习</h2>
+			<h2>{{name}}在学习VUE</h2>
 			<!-- 阻止默认事件（常用） -->
-			<a href="http://www.atguigu.com" @click.prevent="showInfo">点我提示信息</a>
+			<a href="https://cn.vuejs.org/" @click.prevent="showInfo">点我提示信息</a>
 
 			<!-- 阻止事件冒泡（常用） -->
 			<div class="demo1" @click="showInfo">
 				<button @click.stop="showInfo">点我提示信息</button>
 				<!-- 修饰符可以连续写 -->
-				<!-- <a href="http://www.atguigu.com" @click.prevent.stop="showInfo">点我提示信息</a> -->
+				<!-- <a href="https://cn.vuejs.org/" @click.prevent.stop="showInfo">点我提示信息</a> -->
 			</div>
 
 			<!-- 事件只触发一次（常用） -->
@@ -67,7 +70,7 @@
 			</div>
 
 			<!-- 只有event.target是当前操作的元素时才触发事件； -->
-			<div class="demo1" @click.self="showInfo">
+			<div class="demo1" @click.self="showInfo" >
 				<button @click="showInfo">点我提示信息</button>
 			</div>
 
@@ -78,6 +81,7 @@
 				<li>3</li>
 				<li>4</li>
 			</ul>
+			<!-- scrooll滚动条的滚动 wheel鼠标滚动轮的滚动 -->
 
 		</div>
 	</body>
@@ -88,12 +92,12 @@
 		new Vue({
 			el:'#root',
 			data:{
-				name:'尚硅谷'
+				name:'郑欣悦'
 			},
 			methods:{
 				showInfo(e){
-					alert('同学你好！')
-					// console.log(e.target)
+					// alert('同学你好！')
+					console.log(e.target)
 				},
 				showMsg(msg){
 					console.log(msg)

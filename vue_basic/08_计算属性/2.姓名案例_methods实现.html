@@ -12,13 +12,14 @@
 			姓：<input type="text" v-model="firstName"> <br/><br/>
 			名：<input type="text" v-model="lastName"> <br/><br/>
 			全名：<span>{{fullName()}}</span>
+			<!-- 事件小括号可加可不加 插值语法的时候必须加 否则返回函数 -->
 		</div>
 	</body>
 
 	<script type="text/javascript">
 		Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
 
-		new Vue({
+		vm = new Vue({
 			el:'#root',
 			data:{
 				firstName:'张',
