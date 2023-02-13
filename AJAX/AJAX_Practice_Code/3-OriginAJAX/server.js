@@ -34,7 +34,7 @@ app.all('server',(request,response)=>{
 });
 
 //JSON响应
-app.all('/json-server',(request,response){
+app.all('/json-server',(request,response)=>{
 });
 
 //针对 IE 缓存

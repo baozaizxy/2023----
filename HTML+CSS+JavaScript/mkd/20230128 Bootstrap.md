@@ -1,5 +1,9 @@
 ## 20230128 Bootstrap
 
+只使用bootstrap样式不需要JQuery 使用Bootstrap插件的话 需要JQuery
+
+一般要先引入JQuary再引入bootstrap
+
 - Bootstrap 是一个免费的前端框架，用于更快、更轻松地进行 Web 开发
 - Bootstrap 包括基于 HTML 和 CSS 的设计模板，用于排版、表单、按钮、表格、导航、模态、图像轮播等
 - Bootstrap 提供了丰富的 JavaScript 插件
@@ -84,6 +88,10 @@ Bootstrap 的网格系统是用 flexbox 构建的，页面上最多允许 12 列
 网格系统响应迅速，列会根据屏幕大小自动重新排列。
 
 请确保总和等于或小于 12（如果不需要使用所有 12 个可用列）。
+
+img和span这种属于行列元素 本身可以一行多个
+
+div属于块级元素 本身会占满一整行 若想使其并为一行 要使用栅格系统
 
 ## 网格类
 
