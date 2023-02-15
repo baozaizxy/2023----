@@ -63,6 +63,8 @@
 					filPerons(){
 						return this.persons.filter((p)=>{
 							return p.name.indexOf(this.keyWord) !== -1
+							// indexOf()不存在则返回-1，存在则返回索引值
+							// 所有字符串indexOf('')为0
 						})
 					}
 				}

@@ -52,6 +52,7 @@
 			},
 			methods: {
 				addSex(){
+					// 当时为啥出现set:因为直接vm._data.student.sex='男'赋值 没有getter和setter Vue不认可 无响应式
 					// Vue.set(this.student,'sex','男')
 					this.$set(this.student,'sex','男')
 				}

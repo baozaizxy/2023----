@@ -24,6 +24,7 @@
 		<div id="root">
 			<form @submit.prevent="demo">
 				账号：<input type="text" v-model.trim="userInfo.account"> <br/><br/>
+				<!-- 删掉输入文本中前后的空格 -->
 				密码：<input type="password" v-model="userInfo.password"> <br/><br/>
 				年龄：<input type="number" v-model.number="userInfo.age"> <br/><br/>
 				性别：
@@ -45,6 +46,7 @@
 				<br/><br/>
 				其他信息：
 				<textarea v-model.lazy="userInfo.other"></textarea> <br/><br/>
+				<!-- 此除lazy使得Vue不必时刻监测文本框中的内容 等文本框失去焦点的一瞬间一次性填充即可 -->
 				<input type="checkbox" v-model="userInfo.agree">阅读并接受<a href="http://www.atguigu.com">《用户协议》</a>
 				<button>提交</button>
 			</form>
@@ -63,10 +65,12 @@
 					age:18,
 					sex:'female',
 					hobby:[],
+					// 一定要写成数组形式 否则若写成字符串形式 只收集checked or not
 					city:'beijing',
 					other:'',
 					agree:''
 				}
+				// 因为下面一般不直接输出_data中的数据，因此将用户数据放到userInfo中
 			},
 			methods: {
 				demo(){

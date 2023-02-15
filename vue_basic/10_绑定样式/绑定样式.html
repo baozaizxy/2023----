@@ -42,8 +42,8 @@
 					1. class样式
 								写法:class="xxx" xxx可以是字符串、对象、数组。
 										字符串写法适用于：类名不确定，要动态获取。
-										对象写法适用于：要绑定多个样式，个数不确定，名字也不确定。
-										数组写法适用于：要绑定多个样式，个数确定，名字也确定，但不确定用不用。
+										对象写法适用于：要绑定多个样式，个数确定，名字也确定，但不确定用不用。
+										数组写法适用于：要绑定多个样式，个数不确定，名字也不确定。
 					2. style样式
 								:style="{fontSize: xxx}"其中xxx是动态值。
 								:style="[a,b]"其中a、b是样式对象。
@@ -72,9 +72,10 @@
 		const vm = new Vue({
 			el:'#root',
 			data:{
-				name:'尚硅谷',
+				name:'郑欣悦 ',
 				mood:'normal',
 				classArr:['atguigu1','atguigu2','atguigu3'],
+				// 不加引号默认是属性 会到vm中找 找不到则undefined 加了引号就是值
 				classObj:{
 					atguigu1:false,
 					atguigu2:false,

@@ -42,8 +42,11 @@
 			},
 			/* watch:{
 				isHot:{
+					// 此除isHot为vm.isHot的简写形式 对象的属性会隐式转化为字符串
+					// data和computed都可以监视得到
 					immediate:true, //初始化时让handler调用一下
 					//handler什么时候调用？当isHot发生改变时。
+					// 能检测到修改前后的值
 					handler(newValue,oldValue){
 						console.log('isHot被修改了',newValue,oldValue)
 					}
@@ -52,6 +55,7 @@
 		})
 
 		vm.$watch('isHot',{
+			// 此处isHot不会自动转化 要加引号
 			immediate:true, //初始化时让handler调用一下
 			//handler什么时候调用？当isHot发生改变时。
 			handler(newValue,oldValue){

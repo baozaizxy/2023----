@@ -20,8 +20,12 @@
 		const vm = new Vue({
 			el:'#root',
 			data:{
-				name:'尚硅谷',
-				address:'北京',
+				// _data有数据劫持 不要随便打开
+				// 修改name会引起_data中setter的调用
+				// data{}中的数据会加工后再传入_data 以便响应式
+				// Object.defineProperty
+				name:'CHD',
+				address:'草滩一路',
 				student:{
 					name:'tom',
 					age:{

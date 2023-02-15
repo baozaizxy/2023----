@@ -39,10 +39,14 @@
 					setTimeout(()=>{
 						console.log(this)
 						this.fullName = val + '-' + this.lastName
+						// 靠亲自写代码指令来修改 不依靠返回值 因此可以实现异步
+						// 可以用箭头函数 因为setTimeout由浏览器和JS引擎调用 如果写成普通函数 this为window
+						// 写成箭头函数没有自己的this 要往外找
 					},1000);
 				},
 				lastName(val){
 					this.fullName = this.firstName + '-' + val
+					// 为啥这个地方有引号？ 这里是拼串
 				}
 			}
 		})

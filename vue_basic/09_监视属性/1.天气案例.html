@@ -27,6 +27,7 @@
 			computed:{
 				info(){
 					return this.isHot ? '炎热' : '凉爽'
+					// 不加this会报错not defined
 				}
 			},
 			methods: {
