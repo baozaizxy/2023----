@@ -26,6 +26,7 @@
 
 					3.一个简写方式：
 								const school = Vue.extend(options) 可简写为：const school = options
+			组件注册的时候叫什么 使用标签时就叫什么 但是vue的开发者工具看的是定义组件时声明的name
 		-->
 		<!-- 准备好一个容器-->
 		<div id="root">
@@ -48,8 +49,8 @@
 			`,
 			data(){
 				return {
-					name:'尚硅谷',
-					address:'北京'
+					name:'CHD',
+					address:'草滩一路'
 				}
 			}
 		})
@@ -60,6 +61,8 @@
 				msg:'欢迎学习Vue!'
 			},
 			components:{
+				// 如果使用两个单词连起来的情况则
+				// 'my-school' OR MySchool(脚手架环境里)
 				school:s
 			}
 		})

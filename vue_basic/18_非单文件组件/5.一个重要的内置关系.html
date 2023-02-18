@@ -10,6 +10,8 @@
 		<!-- 
 				1.一个重要的内置关系：VueComponent.prototype.__proto__ === Vue.prototype
 				2.为什么要有这个关系：让组件实例对象（vc）可以访问到 Vue原型上的属性、方法。
+				Vue VueComponent是构造函数 有propertype显示原型属性（只有函数才可以有）
+				vm和vc是实例对象 有__properto__隐式原型属性（对象拥有的）和构造函数的原型属性指向同一个原型对象
 		-->
 		<!-- 准备好一个容器-->
 		<div id="root">
@@ -33,13 +35,15 @@
 			`,
 			data(){
 				return {
-					name:'尚硅谷',
-					address:'北京'
+					name:'CHD',
+					address:'草滩一路'
 				}
 			},
 			methods: {
 				showX(){
 					console.log(this.x)
+					// school是component this是school的实例对象
+					// school是VueComponent，说白了他就是一个构造函数。在你写了<school></school>之后才会出现VueComponent的实例。
 				}
 			},
 		})

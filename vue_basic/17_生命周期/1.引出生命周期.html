@@ -18,6 +18,8 @@
 		<div id="root">
 			<h2 v-if="a">你好啊</h2>
 			<h2 :style="{opacity}">欢迎学习Vue</h2>
+			<!-- 变化的东西交给VUE 例如此处的style -->
+			<!-- {opacity:opacity}简写为{opacity} -->
 		</div>
 	</body>
 
@@ -31,6 +33,9 @@
 				opacity:1
 			},
 			methods: {
+				// 如果写在这里有两种可能
+				// 1、作为回调函数来使用 但是定时器不是等待事件触发后才使用
+				// 2、作为插值语法使用 但是当data更新数据时 vue就会重新解析模板 触发新的定时器 数量爆炸
 				
 			},
 			//Vue完成模板的解析并把初始的真实DOM元素放入页面后（挂载完毕）调用mounted

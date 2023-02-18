@@ -28,7 +28,8 @@
 			<h3>现在是：{{time | timeFormater}}</h3>
 			<!-- 过滤器实现（传参） -->
 			<h3>现在是：{{time | timeFormater('YYYY_MM_DD') | mySlice}}</h3>
-			<h3 :x="msg | mySlice">尚硅谷</h3>
+			<!-- |叫管道符 将time传给timeFormater并执行 将返回值替代整个{{}} -->
+			<h3 :x="msg | mySlice">郑欣悦</h3>
 		</div>
 
 		<div id="root2">
@@ -47,7 +48,7 @@
 			el:'#root',
 			data:{
 				time:1621561377603, //时间戳
-				msg:'你好，尚硅谷'
+				msg:'你好，郑欣悦'
 			},
 			computed: {
 				fmtTime(){
@@ -62,6 +63,7 @@
 			//局部过滤器
 			filters:{
 				timeFormater(value,str='YYYY年MM月DD日 HH:mm:ss'){
+					// 传来的参数有str形式则使用 无str则使用形参形式
 					// console.log('@',value)
 					return dayjs(value).format(str)
 				}
@@ -71,7 +73,7 @@
 		new Vue({
 			el:'#root2',
 			data:{
-				msg:'hello,atguigu!'
+				msg:'hello,sherry!'
 			}
 		})
 	</script>

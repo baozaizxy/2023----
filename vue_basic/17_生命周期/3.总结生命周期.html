@@ -36,11 +36,13 @@
 			methods: {
 				stop(){
 					this.$destroy()
+					// vm被销毁
 				}
 			},
 			//Vue完成模板的解析并把初始的真实DOM元素放入页面后（挂载完毕）调用mounted
 			mounted(){
 				console.log('mounted',this)
+				// 不在外面声明let timer 而是使用this.timer 使得mounted和methods都可以使用
 				this.timer = setInterval(() => {
 					console.log('setInterval')
 					this.opacity -= 0.01
@@ -49,6 +51,7 @@
 			},
 			beforeDestroy() {
 				clearInterval(this.timer)
+				// 清除循环定时器
 				console.log('vm即将驾鹤西游了')
 			},
 		})

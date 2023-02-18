@@ -7,12 +7,15 @@
 </template>
 
 <script>
+	// 分别暴露export const school=vue.extend(){}
+	// 统一暴露 最后export{school}
+	// 默认暴露 最后export default school;
 	 export default {
 		name:'School',
 		data(){
 			return {
-				name:'尚硅谷',
-				address:'北京昌平'
+				name:'CHD',
+				address:'草滩一路'
 			}
 		},
 		methods: {
