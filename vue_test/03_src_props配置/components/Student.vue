@@ -14,8 +14,9 @@
 		data() {
 			console.log(this)
 			return {
-				msg:'我是一个尚硅谷的学生',
+				msg:'我是一个学生',
 				myAge:this.age
+				// props优先级高于data
 			}
 		},
 		methods: {

@@ -3,7 +3,9 @@
 		<div class="todo-container">
 			<div class="todo-wrap">
 				<MyHeader :addTodo="addTodo"/>
+				<!-- 父组件vue函数传给myheader 数组传给mylist -->
 				<MyList :todos="todos" :checkTodo="checkTodo" :deleteTodo="deleteTodo"/>
+				<!-- v-for 有点忘 <MyItem v-for"todoObj in todos" :key="todoObj.id" :todo="todoObj"/>-->  
 				<MyFooter :todos="todos" :checkAllTodo="checkAllTodo" :clearAllTodo="clearAllTodo"/>
 			</div>
 		</div>
@@ -21,6 +23,8 @@
 		data() {
 			return {
 				//由于todos是MyHeader组件和MyFooter组件都在使用，所以放在App中（状态提升）
+				// 直接把todo放在item中在单个删改数据时会更加轻松 因为不需要props来传递数据 因此可以通过自己组件的函数直接修改 不需要组件化传递
+				// 但是增加数据需要header给item 
 				todos:[
 					{id:'001',title:'抽烟',done:true},
 					{id:'002',title:'喝酒',done:false},
@@ -35,12 +39,15 @@
 			},
 			//勾选or取消勾选一个todo
 			checkTodo(id){
+				// 遍历
 				this.todos.forEach((todo)=>{
 					if(todo.id === id) todo.done = !todo.done
 				})
 			},
 			//删除一个todo
 			deleteTodo(id){
+				// filter函数也可以删除 请复习如何实现 this.todos = this.todos.filter(todo => todo.id !== id) 
+				// 但是filter方法不改变原数组（不改变原数组的方法有？）
 				this.todos = this.todos.filter( todo => todo.id !== id )
 			},
 			//全选or取消全选

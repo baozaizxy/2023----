@@ -10,7 +10,7 @@
 		cd 目录名 进入到指定的目录
 		md 目录名 创建一个文件夹
 		rd 目录名 删除一个文件夹	
-
+	
 		- 目录
 		. 表示当前目录
 		.. 表示上一级目录
@@ -76,12 +76,10 @@ Node
 			
 		- Node的服务器单线程的
 			- Node处理请求时是单线程，但是在后台拥有一个I/O线程池
-			
+
 
 
 ​	VSCode 有nodemon 修改保存自动运行
-
-	原型链
 
 ## module
 
@@ -121,7 +119,7 @@ Node
 						- 例子：
 							exports.属性 = 属性值;
 							exports.方法 = 函数;
-							
+						
 					- 使用module.exports 既可以通过.的形式，也可以直接赋值
 						- 例子：
 							module.exports.属性 = 属性值;
@@ -155,15 +153,15 @@ Node
 			实际上模块中的代码都是包装在一个函数中执行的，并且在执行时，同时传递了五个参数
 
 ​						
-		- npm的命令
-			- npm -v 查看npm的版本
-			- npm version 查看所有模块的版本
-			- npm search 包名 搜索包
-			- npm install / i 包名 安装包
-			- npm remove / r 包名 删除包
-			- npm install 包名 --save 安装包并添加到依赖中 *****
-			- npm install 下载当前项目所依赖的包
-			- npm install 包名 -g 全局安装包（全局安装的包一般都是一些工具）
+​		- npm的命令
+​			- npm -v 查看npm的版本
+​			- npm version 查看所有模块的版本
+​			- npm search 包名 搜索包
+​			- npm install / i 包名 安装包
+​			- npm remove / r 包名 删除包
+​			- npm install 包名 --save 安装包并添加到依赖中 *****
+​			- npm install 下载当前项目所依赖的包
+​			- npm install 包名 -g 全局安装包（全局安装的包一般都是一些工具）
 
 - 包结构 
 	本质就是压缩文件 解压以后还原为目录
@@ -182,7 +180,7 @@ Node
 				main 包的主要的文件
 				bin 可执行文件
 				keywords 关键字（意味着包可以被查询到）
-				
+	
 - npm（Node Package Manager node的包管理器）
 		- 通过npm可以对node中的包进行上传、下载、搜索等操作
 		- npm会在安装完node以后，自动安装
@@ -200,6 +198,7 @@ Node
 
 - 通过npm下载的包都放在了node_module文件夹中
 			
+
 文件系统（File System）
 	- Buffer（缓冲区）
 		- Buffer和数组的结构的非常类似，数组不能存储二进制文件，Buffer是专门用来存储二进制数据的
@@ -248,7 +247,8 @@ Node
 					- err 错误对象， 没有错误则为null
 					- fd 文件的描述符
 
-			
+
+​			
 		- 写入文件
 			1.同步写入
 			2.异步写入
@@ -318,7 +318,7 @@ Node
 						});
 						ws.write("text");
 						ws.end();
-
+	
 						- 读
 						如果要读取一个可读流中的数据，必须要为可读流绑定一个data事件，data事件绑定完毕，他会自动开始读取数据
 						var fs = require("fs");
@@ -327,13 +327,13 @@ Node
 							console.log(data);
 							//多次读取 因此不能用once 要用on
 						});
-
+	
 						rs.once("close",function () {
 						console.log("可读流关闭了~~");
 						//数据读取完毕，关闭可写流
 						ws.end();
 						});
-
+	
 						- rs.pipe(ws); //pipe可以将可读流中的内容，直接输出到可写流中
 arguments	
 ​JSON文件不能写注释

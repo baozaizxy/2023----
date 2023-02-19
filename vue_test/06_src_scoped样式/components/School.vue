@@ -10,8 +10,8 @@
 		name:'School',
 		data() {
 			return {
-				name:'尚硅谷atguigu',
-				address:'北京',
+				name:'长安大学CHD',
+				address:'草滩一路',
 			}
 		}
 	}

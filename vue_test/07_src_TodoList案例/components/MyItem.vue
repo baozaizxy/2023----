@@ -1,6 +1,7 @@
 <template>
 	<li>
 		<label>
+			<!-- 绑定checked初始化显示 -->
 			<input type="checkbox" :checked="todo.done" @change="handleCheck(todo.id)"/>
 			<!-- 如下代码也能实现功能，但是不太推荐，因为有点违反原则，因为修改了props -->
 			<!-- <input type="checkbox" v-model="todo.done"/> -->
@@ -24,6 +25,7 @@
 			//删除
 			handleDelete(id){
 				if(confirm('确定删除吗？')){
+					// confirm根据用户的操作获得bool值
 					//通知App组件将对应的todo对象删除
 					this.deleteTodo(id)
 				}

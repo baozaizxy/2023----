@@ -19,10 +19,13 @@
 			//总数
 			total(){
 				return this.todos.length
+				// 模板里写不用写this 这里要加上
 			},
 			//已完成数
 			doneTotal(){
 				//此处使用reduce方法做条件统计
+				// reduce 的返回值为上一次的pre 最后一次调用的返回值 是reduce函数的返回值
+				// current 就是每一个遍历传入的todo对象
 				/* const x = this.todos.reduce((pre,current)=>{
 					console.log('@',pre,current)
 					return pre + (current.done ? 1 : 0)

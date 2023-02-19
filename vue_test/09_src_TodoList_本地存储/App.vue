@@ -21,6 +21,7 @@
 		data() {
 			return {
 				//由于todos是MyHeader组件和MyFooter组件都在使用，所以放在App中（状态提升）
+				// 避免初始化时进行 取 length 等数组操作时出现问题 
 				todos:JSON.parse(localStorage.getItem('todos')) || []
 			}
 		},
@@ -54,6 +55,7 @@
 		},
 		watch: {
 			todos:{
+				// 不开启深度监视 数组内部对象的属性变化时 检测不到
 				deep:true,
 				handler(value){
 					localStorage.setItem('todos',JSON.stringify(value))

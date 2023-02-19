@@ -18,13 +18,16 @@
 		},
 		methods: {
 			add(){
-				//校验数据
+				// 获取数据 event.target.value
+				//校验数据 trim去掉前后空格
 				if(!this.title.trim()) return alert('输入不能为空')
-				//将用户的输入包装成一个todo对象
+				// 将用户的输入包装成一个todo对象
+				// 有服务器的情况下 一般由服务器根据数据库配置id
 				const todoObj = {id:nanoid(),title:this.title,done:false}
 				//通知App组件去添加一个todo对象
 				this.addTodo(todoObj)
-				//清空输入
+				//清空输入 event.target.value = ''
+				// 自己操作DOM的写法 
 				this.title = ''
 			}
 		},

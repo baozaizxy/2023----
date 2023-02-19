@@ -2,6 +2,7 @@
 	<div>
 		<img src="./assets/logo.png" alt="logo">
 		<School></School>
+		<!-- 自闭和在非脚手架里容易出现问题 但是这里是脚手架 就可以直接<school/> -->
 		<Student></Student>
 	</div>
 </template>

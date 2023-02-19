@@ -1,4 +1,5 @@
 export const hunhe = {
+	// 混合即 复用配置
 	methods: {
 		showName(){
 			alert(this.name)

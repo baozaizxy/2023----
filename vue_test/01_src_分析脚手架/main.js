@@ -1,7 +1,9 @@
 /* 
 	该文件是整个项目的入口文件
 */
-//引入Vue
+//引入Vue 脚手架已经把vue安装到node_modules中 
+// 引入的是阉割版vue  没有template解析器 需要用render函数
+// 标签类型的template没关系 有依赖可以专门解析template标签
 import Vue from 'vue'
 //引入App组件，它是所有组件的父组件
 import App from './App.vue'

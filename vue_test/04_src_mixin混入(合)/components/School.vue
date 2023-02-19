@@ -13,8 +13,8 @@
 		name:'School',
 		data() {
 			return {
-				name:'尚硅谷',
-				address:'北京',
+				name:'CHD',
+				address:'草滩一路',
 				x:666
 			}
 		},

@@ -7,6 +7,7 @@
 	<body>
 		<h2>localStorage</h2>
 		<button onclick="saveData()">点我保存一个数据</button>
+		<!-- 原生html一定要加括号 vue不用加么？ -->
 		<button onclick="readData()">点我读取一个数据</button>
 		<button onclick="deleteData()">点我删除一个数据</button>
 		<button onclick="deleteAllData()">点我清空一个数据</button>
@@ -15,6 +16,8 @@
 			let p = {name:'张三',age:18}
 
 			function saveData(){
+				// window上的方法可以省略window. 直接写
+				// 其形式是键值对 key-value  并且都得是字符串
 				localStorage.setItem('msg','hello!!!')
 				localStorage.setItem('msg2',666)
 				localStorage.setItem('person',JSON.stringify(p))
@@ -25,6 +28,8 @@
 
 				const result = localStorage.getItem('person')
 				console.log(JSON.parse(result))
+
+				// JSON.parse(null) 的结果还是 null 不是 undefined
 
 				// console.log(localStorage.getItem('msg3'))
 			}
