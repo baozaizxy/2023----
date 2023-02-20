@@ -25,6 +25,7 @@
 			}
 		},
 		methods: {
+			// 数据在哪里 操作数据的方法就在哪里
 			//添加一个todo
 			addTodo(todoObj){
 				this.todos.unshift(todoObj)
@@ -61,6 +62,7 @@
 			}
 		},
 		mounted() {
+			// 此处的this是此todo对象
 			this.$bus.$on('checkTodo',this.checkTodo)
 			this.$bus.$on('deleteTodo',this.deleteTodo)
 		},

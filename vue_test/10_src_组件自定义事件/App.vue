@@ -9,7 +9,9 @@
 		<!-- <Student @atguigu="getStudentName" @demo="m1"/> -->
 
 		<!-- 通过父组件给子组件绑定一个自定义事件实现：子给父传递数据（第二种写法，使用ref） -->
+		<!-- v-on指令是事件绑定指令 简写@ v-on在student的组件标签上，所以说是给student的组件对象vue component(VC)身上绑定了一个事件 -->
 		<Student ref="student" @click.native="show"/>
+		<!-- 通过this.$refs.student 可以拿到 student 的实例对象 -->
 	</div>
 </template>
 
@@ -27,6 +29,7 @@
 			}
 		},
 		methods: {
+			// methods 里方法的this一定是vue
 			getSchoolName(name){
 				console.log('App收到了学校名：',name)
 			},

@@ -36,7 +36,8 @@
 					if(todo.id === id) todo.done = !todo.done
 				})
 			},
-			//删除一个todo
+			// 删除一个todo
+			// _ 参数会收到 但是不用 放在此处占个位
 			deleteTodo(_,id){
 				this.todos = this.todos.filter( todo => todo.id !== id )
 			},

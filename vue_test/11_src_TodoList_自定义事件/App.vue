@@ -2,6 +2,7 @@
 	<div id="root">
 		<div class="todo-container">
 			<div class="todo-wrap">
+				<!-- 把所有的父给子传递的方法修改为在父中给子绑定自定义事件 -->
 				<MyHeader @addTodo="addTodo"/>
 				<MyList :todos="todos" :checkTodo="checkTodo" :deleteTodo="deleteTodo"/>
 				<MyFooter :todos="todos" @checkAllTodo="checkAllTodo" @clearAllTodo="clearAllTodo"/>

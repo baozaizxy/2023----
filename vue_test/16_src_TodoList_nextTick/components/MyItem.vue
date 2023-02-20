@@ -41,13 +41,18 @@
 				}
 			},
 			//编辑
+			// 执行完整个方法才得到新的数据 vue进行解析
 			handleEdit(todo){
+				// hasOwnProperty检测是否有isEdit 
 				if(todo.hasOwnProperty('isEdit')){
 					todo.isEdit = true
 				}else{
 					// console.log('@')
 					this.$set(todo,'isEdit',true)
 				}
+				// nextTick指定的回调函数会在DOM结点更新后再执行
+				// 点击编辑 todo.isEdit值更改后 DOM节点已操作完毕 获取焦点
+				// 定时器也能操作 但是不太好
 				this.$nextTick(function(){
 					this.$refs.inputTitle.focus()
 				})

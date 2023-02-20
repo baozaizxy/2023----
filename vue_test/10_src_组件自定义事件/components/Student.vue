@@ -27,6 +27,8 @@
 			},
 			sendStudentlName(){
 				//触发Student组件实例身上的atguigu事件
+				// 触发事件不需要props接收 因为v-on自然就把这个事件绑定给了student 直接emit触发就可以
+				// 出发自定义事件要用 emit
 				this.$emit('atguigu',this.name,666,888,900)
 				// this.$emit('demo')
 				// this.$emit('click')
