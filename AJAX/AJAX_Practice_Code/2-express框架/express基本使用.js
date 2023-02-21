@@ -1,4 +1,4 @@
-//NMD去学node.js和ES6箭头函数了
+
 // 1. 引入express
 const { response } = require('express');
 const express = require('express');
@@ -11,11 +11,13 @@ const app = express();
 // response 是对响应报文的封装
 app.get('/',(request, response)=>{
     //设置响应
+    // HELLO EXPRESS 是响应体
     response.send("HELLO EXPRESS");
 
 });
 
 //4. 监听端口启动服务
+// 端口参数是8000 后面是回调函数
 app.listen(8000, ()=>{
     console.log("服务已经启动， 8000端口监听中....");
 })

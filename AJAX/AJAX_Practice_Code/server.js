@@ -9,12 +9,13 @@ const app = express();
 // 3. 创建路由规则
 // request 是对请求报文的封装
 // response 是对响应报文的封装
+// 请求头url是server的话 进入回调函数并由response进行响应
 app.get('/server',(request, response)=>{
-    //设置响应头  设置允许跨域
+   //设置响应头  设置允许跨域     key:Access-Control-Allow-Origin  value:*
     response.setHeader('Access-Control-Allow-Origin','*');
     
     //设置响应体
-    response.send('HELLO AJAX-2');
+    response.send('HELLO AJAX');
 
 });
 
@@ -25,7 +26,7 @@ app.post('/server',(request, response)=>{
     // response.setHeader('Access-Control-Allow-Headers', '*');
     
     //设置响应体
-    response.send('HELLO AJAX');
+    response.send('HELLO AJAX POST');
 
 });
 
@@ -58,6 +59,21 @@ app.get('/delay', (request, response) => {
 
 
 });
+
+    // 针对axios-server
+    app.options('/axios-server', (request, response) =>{
+        response.setHeader('Access-Control-Allow-Headers', '*');// 设置允许自定义请求头
+        response.setHeader('Access-Control-Allow-Origin', '*');// 设置允许跨域
+        // response.end();
+    });
+
+    app.post('/axios-server', (request, response) =>{
+        response.setHeader('Access-Control-Allow-Headers', '*');// 设置允许自定义请求头
+        response.setHeader('Access-Control-Allow-Origin', '*');// 设置允许跨域
+        console.log('axios-server 接口接收到请求');
+
+        response.send('HELLO Axios');
+    });
 
 //4. 监听端口启动服务
 app.listen(8000, ()=>{
