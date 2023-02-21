@@ -1,8 +1,9 @@
 <template>
 	<div>
 		<button @click="isShow = !isShow">显示/隐藏</button>
-		<!-- 直接写appear可等价为 :appear="true" -->
-		<transition name="hello" appear>
+		<!-- 直接写appear可等价为 :appear="true" 即一开始就有动画 -->
+		<!-- transition标签：Vue 的内置动画标签 -->
+		<transition name="hello">
 			<h1 v-show="isShow">你好啊！</h1>
 		</transition>
 	</div>
@@ -10,7 +11,7 @@
 
 <script>
 	export default {
-		name:'Test',
+		name:'Test_one',
 		data() {
 			return {
 				isShow:true

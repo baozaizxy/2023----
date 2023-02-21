@@ -3,14 +3,14 @@
 		<button @click="isShow = !isShow">显示/隐藏</button>
 		<transition-group name="hello" appear>
 			<h1 v-show="!isShow" key="1">你好啊！</h1>
-			<h1 v-show="isShow" key="2">尚硅谷！</h1>
+			<h1 v-show="isShow" key="2">SHERRY!</h1>
 		</transition-group>
 	</div>
 </template>
 
 <script>
 	export default {
-		name:'Test',
+		name:'Test_two',
 		data() {
 			return {
 				isShow:true
