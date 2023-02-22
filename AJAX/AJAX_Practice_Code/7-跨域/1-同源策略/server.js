@@ -4,6 +4,8 @@ const app = express();
 
 app.get('/home', (request, response)=>{
     //响应一个页面
+    // __dirname是nodejs里用来获取绝对路径的方式
+    // 使得9000端口绑定了index.html页面 
     response.sendFile(__dirname + '/index.html');
 });
 

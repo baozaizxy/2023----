@@ -1,3 +1,5 @@
+<!-- AJAX默认遵守同源策略 -->
+<!-- 直接打开端口默认8000，liveserver打开端口5500 一定要localhost:9000下打开 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,7 @@
     <title>首页</title>
 </head>
 <body>
-    <h1>尚硅谷</h1>
+    <h1>CHD</h1>
     <button>点击获取用户数据</button>
     <script>
         const btn = document.querySelector('button');
@@ -14,6 +16,7 @@
         btn.onclick = function(){
             const x = new XMLHttpRequest();
             //这里因为是满足同源策略的, 所以 url 可以简写
+            // 协议域名和端口会被浏览器自动加上
             x.open("GET",'/data');
             //发送
             x.send();

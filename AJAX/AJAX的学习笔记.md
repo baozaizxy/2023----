@@ -28,13 +28,17 @@
 2. 存在跨域问题（同源）
 3. SEO不友好（爬虫获取不到信息）
 
+数据是AJAX向服务端发送请求 服务端返回数据 由JS动态创建的 
+
 ### 1.4 AJAX 的使用
 
 #### 1.4.1 核心对象
 
+HTTP
+
 **请求报文**
 
-行  POST url地址 HTTP版本
+行  POST/GET  url地址 HTTP版本
 
 头  HOST：atguigu.com
     Cookie: name=guigu
@@ -44,28 +48,54 @@
 空行
 
 体 Get请求 请求体为空
-   POST请求 请求体可以不为空
-   username=admin&password=admin
+     POST请求 请求体可以不为空
+      username=admin&password=admin
 
 **响应报文**
 
-行  HTTP/1.1 200 OK 
-      404找不到
-      403被禁止
-      401未授权
-      500内部错误
-      2开头ok 3开头重载 4开头访问失败 5开头后端问题
+行  HTTP/1.1 200 OK  协议版本号一般无意义 需要的是状态码和状态字符串
+
+​      404找不到
+​      403被禁止
+​      401未授权
+​      500内部错误
+
+​      303跳转（此时响应体为空）
+
+2开头ok 3开头重载 4开头访问失败 5开头后端问题
 头  Content-Type: text/html;charset=utf-8
     Content-length: 2048
     Content-encoding: gzip(压缩方式)
 空行
-体   <html>
-         <head>
-         </head>
-         <body>
+体   
+
+```html
+<html>
+
+    <head>
+    </head>
+
+​    <body>
+
             <h1>郑欣悦</h1>
-         </body>
-     </html>
+
+​     </body>
+​ </html>
+```
+
+![image-20230221193213825](D:\appdata\Typora\typora-user-images\image-20230221193213825.png)
+
+对请求url参数的解析
+
+![image-20230221193404779](D:\appdata\Typora\typora-user-images\image-20230221193404779.png)
+
+对响应体解析之后的查看页面
+
+**Express 服务端框架**
+
+基于node.js平台
+
+**nodemon工具能在文件修改时够帮助重启应用**
 
 ## 第二章 jQuery中的AJAX
 
