@@ -18,7 +18,7 @@
 
 <script>
 	export default {
-		name:'List',
+		name:'List_Component',
 		data() {
 			return {
 				info:{
@@ -30,7 +30,9 @@
 			}
 		},
 		mounted() {
+			// 在vue里不能动_data 动了_data就把响应式改没了 没有setter和getter
 			this.$bus.$on('updateListData',(dataObj)=>{
+				// 通过字面量合并对象 没更改的部分继续保留 修改的部分进行更新
 				this.info = {...this.info,...dataObj}
 			})
 		},

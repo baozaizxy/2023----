@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App.vue'
 //引入VueRouter
 import VueRouter from 'vue-router'
-//引入路由器
+//引入路由器 这个是自己写的 像store类似
 import router from './router'
 
 //关闭Vue的生产提示

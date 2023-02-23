@@ -18,7 +18,7 @@
 
 <script>
 	export default {
-		name:'List',
+		name:'APP_List',
 		data() {
 			return {
 				info:{

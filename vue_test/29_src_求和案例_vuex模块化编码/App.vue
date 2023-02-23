@@ -1,18 +1,19 @@
+<!-- 能解决命名冲突 -->
 <template>
 	<div>
-		<Count/>
+		<Count_module/>
 		<hr>
-		<Person/>
+		<Person_module/>
 	</div>
 </template>
 
 <script>
-	import Count from './components/Count'
-	import Person from './components/Person'
+	import Count_module from './components/Count'
+	import Person_module from './components/Person'
 
 	export default {
 		name:'App',
-		components:{Count,Person},
+		components:{Count_module,Person_module},
 		mounted() {
 			// console.log('App',this)
 		},

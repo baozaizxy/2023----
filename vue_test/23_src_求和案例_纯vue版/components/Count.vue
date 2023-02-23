@@ -2,6 +2,9 @@
 	<div>
 		<h1>当前求和为：{{sum}}</h1>
 		<select v-model.number="n">
+			<!-- OPTION2:
+			<option :value="1">1</option>
+			加了冒号v-bind 其中的值都当作js表达式去解析 -->
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
@@ -15,7 +18,7 @@
 
 <script>
 	export default {
-		name:'Count',
+		name:'Count_num',
 		data() {
 			return {
 				n:1, //用户选择的数字

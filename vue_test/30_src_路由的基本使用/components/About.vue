@@ -4,6 +4,6 @@
 
 <script>
 	export default {
-		name:'About'
+		name:'About_route'
 	}
 </script>

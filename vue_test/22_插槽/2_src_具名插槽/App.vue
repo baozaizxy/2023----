@@ -1,11 +1,11 @@
 <template>
 	<div class="container">
-		<Category title="美食" >
+		<Category_two title="美食" >
 			<img slot="center" src="https://s3.ax1x.com/2021/01/16/srJlq0.jpg" alt="">
 			<a slot="footer" href="http://www.atguigu.com">更多美食</a>
-		</Category>
+		</Category_two>
 
-		<Category title="游戏" >
+		<Category_two title="游戏" >
 			<ul slot="center">
 				<li v-for="(g,index) in games" :key="index">{{g}}</li>
 			</ul>
@@ -13,9 +13,9 @@
 				<a href="http://www.atguigu.com">单机游戏</a>
 				<a href="http://www.atguigu.com">网络游戏</a>
 			</div>
-		</Category>
+		</Category_two>
 
-		<Category title="电影">
+		<Category_two title="电影">
 			<video slot="center" controls src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
 			<template v-slot:footer>
 				<div class="foot">
@@ -25,15 +25,15 @@
 				</div>
 				<h4>欢迎前来观影</h4>
 			</template>
-		</Category>
+		</Category_two>
 	</div>
 </template>
 
 <script>
-	import Category from './components/Category'
+	import Category_two from './components/Category'
 	export default {
 		name:'App',
-		components:{Category},
+		components:{Category_two},
 		data() {
 			return {
 				foods:['火锅','烧烤','小龙虾','牛排'],

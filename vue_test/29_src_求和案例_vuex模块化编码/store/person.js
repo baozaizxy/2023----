@@ -2,9 +2,11 @@
 import axios from 'axios'
 import { nanoid } from 'nanoid'
 export default {
+	// 命名空间为true后 personAbout才能被mapState识别到
 	namespaced:true,
 	actions:{
 		addPersonWang(context,value){
+			// 数据姓王的筛选方法
 			if(value.name.indexOf('王') === 0){
 				context.commit('ADD_PERSON',value)
 			}else{

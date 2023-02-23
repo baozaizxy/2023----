@@ -19,7 +19,7 @@
 <script>
 	import {mapState,mapGetters,mapMutations,mapActions} from 'vuex'
 	export default {
-		name:'Count',
+		name:'Count_multi',
 		data() {
 			return {
 				n:1, //用户选择的数字

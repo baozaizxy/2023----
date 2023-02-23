@@ -16,7 +16,7 @@
 <script>
 	import {nanoid} from 'nanoid'
 	export default {
-		name:'Person',
+		name:'Person_module',
 		data() {
 			return {
 				name:''
@@ -30,12 +30,15 @@
 				return this.$store.state.countAbout.sum
 			},
 			firstPersonName(){
+				// getter中是这样写的 personAbout/firstPersonName
 				return this.$store.getters['personAbout/firstPersonName']
 			}
 		},
 		methods: {
 			add(){
 				const personObj = {id:nanoid(),name:this.name}
+				// cocommit第一个参数是mutation方法 第二个是参数值
+				// 这种写法 分类名/mutation名
 				this.$store.commit('personAbout/ADD_PERSON',personObj)
 				this.name = ''
 			},

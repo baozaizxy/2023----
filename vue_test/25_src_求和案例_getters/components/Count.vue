@@ -16,12 +16,13 @@
 
 <script>
 	export default {
-		name:'Count',
+		name:'Count_getters',
 		data() {
 			return {
 				n:1, //用户选择的数字
 			}
 		},
+		// method只能自己用 大家都要用就要写在index里写getters
 		methods: {
 			increment(){
 				this.$store.commit('JIA',this.n)
@@ -37,7 +38,7 @@
 			},
 		},
 		mounted() {
-			console.log('Count',this.$store)
+			console.log('Count_getters',this.$store)
 		},
 	}
 </script>

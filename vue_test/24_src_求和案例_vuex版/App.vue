@@ -1,14 +1,14 @@
 <template>
 	<div>
-		<Count/>
+		<Count_test/>
 	</div>
 </template>
 
 <script>
-	import Count from './components/Count'
+	import Count_test from './components/Count'
 	export default {
 		name:'App',
-		components:{Count},
+		components:{Count_test},
 		mounted() {
 			// console.log('App',this)
 		},

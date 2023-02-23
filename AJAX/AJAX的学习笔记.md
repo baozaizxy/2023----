@@ -131,7 +131,7 @@ type：设置返回内容格式，xml、html、script、json、text、_default
 
    在网页有一些标签天生具有跨域能力，比如：img, link, iframe, script
 
-   JSONP就是利用**script**标签的跨域能力来发送请求的
+   JSONP就是利用**script**标签的src属性的跨域能力来发送请求的，它不受同源策略限制
 
 3. JSONP的使用
 
@@ -171,3 +171,21 @@ type：设置返回内容格式，xml、html、script、json、text、_default
    
    })
    ```
+
+同源策略：协议名、主机名、端口号一致
+
+出现跨域问题时：请求成功发送给服务器 服务器返回数据给浏览器 但是浏览器进行拦截 没有最终返回给用户
+
+
+
+JSONP应用不广泛的原因：
+1、要前后端配合使用
+
+2、只能用于get请求
+
+服务器之间传数据不用AJAX 
+
+有浏览器——》才有window——》才有xhr才有fetch
+
+两台服务器交互用的是http
+

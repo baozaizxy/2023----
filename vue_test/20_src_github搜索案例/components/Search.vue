@@ -11,7 +11,7 @@
 <script>
 	import axios from 'axios'
 	export default {
-		name:'Search',
+		name:'Search_Component',
 		data() {
 			return {
 				keyWord:''
@@ -21,6 +21,8 @@
 			searchUsers(){
 				//请求前更新List的数据
 				this.$bus.$emit('updateListData',{isLoading:true,errMsg:'',users:[],isFirst:false})
+				// ${}里面的内容会当成JS去解析
+				// github已经通过CORS解决了跨域问题 https导致的跨域问题不用担心
 				axios.get(`https://api.github.com/search/users?q=${this.keyWord}`).then(
 					response => {
 						console.log('请求成功了')

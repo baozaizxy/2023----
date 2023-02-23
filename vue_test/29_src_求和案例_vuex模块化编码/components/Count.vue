@@ -1,9 +1,9 @@
 <template>
 	<div>
 		<h1>当前求和为：{{sum}}</h1>
-		<h3>当前求和放大10倍为：{{bigSum}}</h3>
+		<h3>当前求和放大10倍为:{{bigSum}}</h3>
 		<h3>我在{{school}}，学习{{subject}}</h3>
-		<h3 style="color:red">Person组件的总人数是：{{personList.length}}</h3>
+		<h3 style="color:red">Person组件的总人数是:{{personList.length}}</h3>
 		<select v-model.number="n">
 			<option value="1">1</option>
 			<option value="2">2</option>
@@ -19,7 +19,7 @@
 <script>
 	import {mapState,mapGetters,mapMutations,mapActions} from 'vuex'
 	export default {
-		name:'Count',
+		name:'Count_module',
 		data() {
 			return {
 				n:1, //用户选择的数字

@@ -8,6 +8,7 @@
 			<option value="2">2</option>
 			<option value="3">3</option>
 		</select>
+		<!-- 不写小括号也传参 传的参是event -->
 		<button @click="increment(n)">+</button>
 		<button @click="decrement(n)">-</button>
 		<button @click="incrementOdd(n)">当前求和为奇数再加</button>
@@ -18,7 +19,7 @@
 <script>
 	import {mapState,mapGetters,mapMutations,mapActions} from 'vuex'
 	export default {
-		name:'Count',
+		name:'Count_map',
 		data() {
 			return {
 				n:1, //用户选择的数字

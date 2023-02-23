@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<!-- 模板里不用this.$store  模板里能看到vc上的所有东西-->
 		<h1>当前求和为：{{$store.state.sum}}</h1>
 		<select v-model.number="n">
 			<option value="1">1</option>
@@ -15,19 +16,21 @@
 
 <script>
 	export default {
-		name:'Count',
+		name:'Count_test',
 		data() {
 			return {
 				n:1, //用户选择的数字
 			}
 		},
 		methods: {
+			// 没有其他业务逻辑 直接commit和mutation对话
 			increment(){
 				this.$store.commit('JIA',this.n)
 			},
 			decrement(){
 				this.$store.commit('JIAN',this.n)
 			},
+			// 需要在action进行逻辑运算 因此先dispatch交给action 再由action交给mutation
 			incrementOdd(){
 				this.$store.dispatch('jiaOdd',this.n)
 			},

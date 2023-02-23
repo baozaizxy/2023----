@@ -10,7 +10,7 @@
 
 <script>
 	export default {
-		name:'Search',
+		name:'APP_Search',
 		data() {
 			return {
 				keyWord:''
@@ -20,6 +20,7 @@
 			searchUsers(){
 				//请求前更新List的数据
 				this.$bus.$emit('updateListData',{isLoading:true,errMsg:'',users:[],isFirst:false})
+				// vue-resource提供的this.$http和this.$axios提供的服务几乎一致 目前axios应用更加很广泛 但是vue1.0经常用到vue-resource
 				this.$http.get(`https://api.github.com/search/users?q=${this.keyWord}`).then(
 					response => {
 						console.log('请求成功了')

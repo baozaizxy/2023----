@@ -1,13 +1,14 @@
 <template>
 	<div class="category">
 		<h3>{{title}}分类</h3>
+		<!-- 谁往插槽里传结构 就把数据传给谁 -->
 		<slot :games="games" msg="hello">我是默认的一些内容</slot>
 	</div>
 </template>
 
 <script>
 	export default {
-		name:'Category',
+		name:'Category_three',
 		props:['title'],
 		data() {
 			return {

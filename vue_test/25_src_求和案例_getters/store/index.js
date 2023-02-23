@@ -43,9 +43,11 @@ const mutations = {
 const state = {
 	sum:0 //当前的和
 }
-//准备getters——用于将state中的数据进行加工
+//准备getters——用于将state中的数据进行加工 像data和computed的关系
+// 不会改变原有值 得到的是新的属性值 记得要命名
 const getters = {
 	bigSum(state){
+		// 和计算属性一样 都是靠return传输返回值决定自己的值
 		return state.sum*10
 	}
 }

@@ -1,13 +1,13 @@
 <template>
 	<div>
-		<Count/>
+		<Count_num/>
 	</div>
 </template>
 
 <script>
-	import Count from './components/Count'
+	import Count_num from './components/Count'
 	export default {
 		name:'App',
-		components:{Count},
+		components:{Count_num},
 	}
 </script>

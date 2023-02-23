@@ -1,18 +1,18 @@
 <template>
 	<div>
-		<Count/>
+		<Count_multi/>
 		<hr>
-		<Person/>
+		<Person_multi/>
 	</div>
 </template>
 
 <script>
-	import Count from './components/Count'
-	import Person from './components/Person'
+	import Count_multi from './components/Count'
+	import Person_multi from './components/Person'
 
 	export default {
 		name:'App',
-		components:{Count,Person},
+		components:{Count_multi,Person_multi},
 		mounted() {
 			// console.log('App',this)
 		},
