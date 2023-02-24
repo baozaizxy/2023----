@@ -7,12 +7,12 @@
 </template>
 
 <script>
-	 export default {
-		name:'School',
+	export default {
+		name:'SchoolCli',
 		data(){
 			return {
-				name:'尚硅谷',
-				address:'北京昌平'
+				name:'CHD',
+				address:'草滩一路'
 			}
 		},
 		methods: {

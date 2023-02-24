@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		name:'Category_three',
+		name:'CategoryThree',
 		props:['title'],
 		data() {
 			return {

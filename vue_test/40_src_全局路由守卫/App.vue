@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row">
-      <Banner/>
+      <BannerMeta/>
     </div>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-2">
@@ -28,9 +28,9 @@
 </template>
 
 <script>
-	import Banner from './components/Banner'
+	import BannerMeta from './components/Banner'
 	export default {
 		name:'App',
-		components:{Banner}
+		components:{BannerMeta}
 	}
 </script>

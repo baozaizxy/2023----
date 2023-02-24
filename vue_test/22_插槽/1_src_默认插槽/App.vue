@@ -1,26 +1,26 @@
 <template>
 	<div class="container">
-		<Category_one title="美食" >
+		<Categoryone title="美食" >
 			<img src="https://s3.ax1x.com/2021/01/16/srJlq0.jpg" alt="">
-		</Category_one>
+		</Categoryone>
 
-		<Category_one title="游戏" >
+		<Categoryone title="游戏" >
 			<ul>
 				<li v-for="(g,index) in games" :key="index">{{g}}</li>
 			</ul>
-		</Category_one>
+		</Categoryone>
 
-		<Category_one title="电影">
-			<video controls src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
-		</Category_one>
+		<Categoryone title="电影">
+			<video controls src="http://clips.vorwaerts-gmbh.de/bigbuckbunny.mp4"></video>
+		</Categoryone>
 	</div>
 </template>
 
 <script>
-	import Category_one from './components/Category'
+	import Categoryone from './components/Category'
 	export default {
 		name:'App',
-		components:{Category_one},
+		components:{Categoryone},
 		data() {
 			return {
 				foods:['火锅','烧烤','小龙虾','牛排'],

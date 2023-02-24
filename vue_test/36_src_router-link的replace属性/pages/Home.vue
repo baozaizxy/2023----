@@ -17,7 +17,7 @@
 
 <script>
 	export default {
-		name:'Home',
+		name:'HomeReplace',
 		/* beforeDestroy() {
 			console.log('Home组件即将被销毁了')
 		}, */

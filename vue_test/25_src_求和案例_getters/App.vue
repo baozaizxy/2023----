@@ -1,14 +1,14 @@
 <template>
 	<div>
-		<Count_getters/>
+		<CountGetters/>
 	</div>
 </template>
 
 <script>
-	import Count_getters from './components/Count'
+	import CountGetters from './components/Count'
 	export default {
 		name:'App',
-		components:{Count_getters},
+		components:{CountGetters},
 		mounted() {
 			// console.log('App',this)
 		},

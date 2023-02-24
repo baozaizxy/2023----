@@ -4,7 +4,7 @@
 
 <script>
 	export default {
-		name:'About',
+		name:'AboutExclusive',
 		/* beforeDestroy() {
 			console.log('About组件即将被销毁了')
 		},*/

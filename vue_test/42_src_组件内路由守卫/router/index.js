@@ -1,11 +1,11 @@
 // 该文件专门用于创建整个应用的路由器
 import VueRouter from 'vue-router'
 //引入组件
-import About from '../pages/About'
-import Home from '../pages/Home'
-import News from '../pages/News'
-import Message from '../pages/Message'
-import Detail from '../pages/Detail'
+import AboutInterior from '../pages/About'
+import HomeInterior from '../pages/Home'
+import NewsInterior from '../pages/News'
+import MessageInterior from '../pages/Message'
+import DetailInterior from '../pages/Detail'
 
 //创建并暴露一个路由器
 const router =  new VueRouter({
@@ -13,19 +13,19 @@ const router =  new VueRouter({
 		{
 			name:'guanyu',
 			path:'/about',
-			component:About,
+			component:AboutInterior,
 			meta:{isAuth:true,title:'关于'}
 		},
 		{
 			name:'zhuye',
 			path:'/home',
-			component:Home,
+			component:HomeInterior,
 			meta:{title:'主页'},
 			children:[
 				{
 					name:'xinwen',
 					path:'news',
-					component:News,
+					component:NewsInterior,
 					meta:{isAuth:true,title:'新闻'},
 					/* beforeEnter: (to, from, next) => {
 						console.log('前置路由守卫',to,from)
@@ -43,13 +43,13 @@ const router =  new VueRouter({
 				{
 					name:'xiaoxi',
 					path:'message',
-					component:Message,
+					component:MessageInterior,
 					meta:{isAuth:true,title:'消息'},
 					children:[
 						{
 							name:'xiangqing',
 							path:'detail',
-							component:Detail,
+							component:DetailInterior,
 							meta:{isAuth:true,title:'详情'},
 
 							//props的第一种写法，值为对象，该对象中的所有key-value都会以props的形式传给Detail组件。

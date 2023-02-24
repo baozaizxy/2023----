@@ -8,7 +8,7 @@
 <script>
 	import pubsub from 'pubsub-js'
 	export default {
-		name:'School',
+		name:'SchoolPubsub',
 		data() {
 			return {
 				name:'CHD',
@@ -24,7 +24,7 @@
 			this.pubId = pubsub.subscribe('hello',(msgName,data)=>{
 				console.log(this)
 				// 不用箭头函数 this 是 undefined 因为使用的是第三方库
-				// console.log('有人发布了hello消息，hello消息的回调执行了',msgName,data)
+				console.log('有人发布了hello消息,hello消息的回调执行了',msgName,data)
 			})
 		},
 		beforeDestroy() {

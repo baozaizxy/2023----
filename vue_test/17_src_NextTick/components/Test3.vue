@@ -18,7 +18,7 @@
 <script>
 	import 'animate.css'
 	export default {
-		name:'Test_three',
+		name:'TestThree',
 		data() {
 			return {
 				isShow:true

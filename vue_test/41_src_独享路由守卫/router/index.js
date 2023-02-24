@@ -1,11 +1,11 @@
 // 该文件专门用于创建整个应用的路由器
 import VueRouter from 'vue-router'
 //引入组件
-import About from '../pages/About'
-import Home from '../pages/Home'
-import News from '../pages/News'
-import Message from '../pages/Message'
-import Detail from '../pages/Detail'
+import AboutExclusive from '../pages/About'
+import HomeExclusive from '../pages/Home'
+import NewsExclusive from '../pages/News'
+import MessageExclusive from '../pages/Message'
+import DetailExclusive from '../pages/Detail'
 
 //创建并暴露一个路由器
 const router =  new VueRouter({
@@ -13,24 +13,24 @@ const router =  new VueRouter({
 		{
 			name:'guanyu',
 			path:'/about',
-			component:About,
+			component:AboutExclusive,
 			meta:{title:'关于'}
 		},
 		{
 			name:'zhuye',
 			path:'/home',
-			component:Home,
+			component:HomeExclusive,
 			meta:{title:'主页'},
 			children:[
 				{
 					name:'xinwen',
 					path:'news',
-					component:News,
+					component:NewsExclusive,
 					meta:{isAuth:true,title:'新闻'},
 					beforeEnter: (to, from, next) => {
 						console.log('独享路由守卫',to,from)
 						if(to.meta.isAuth){ //判断是否需要鉴权
-							if(localStorage.getItem('school')==='atguigu'){
+							if(localStorage.getItem('school')==='CHD'){
 								next()
 							}else{
 								alert('学校名不对，无权限查看！')
@@ -43,13 +43,13 @@ const router =  new VueRouter({
 				{
 					name:'xiaoxi',
 					path:'message',
-					component:Message,
+					component:MessageExclusive,
 					meta:{isAuth:true,title:'消息'},
 					children:[
 						{
 							name:'xiangqing',
 							path:'detail',
-							component:Detail,
+							component:DetailExclusive,
 							meta:{isAuth:true,title:'详情'},
 
 							//props的第一种写法，值为对象，该对象中的所有key-value都会以props的形式传给Detail组件。

@@ -11,7 +11,7 @@
 
 <script>
 	export default {
-		name:'Banner',
+		name:'BannerExclusive',
 		methods: {
 			back(){
 				this.$router.back()

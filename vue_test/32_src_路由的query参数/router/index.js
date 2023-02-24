@@ -1,34 +1,35 @@
+// router带query传参完全不打扰路由配置
 // 该文件专门用于创建整个应用的路由器
 import VueRouter from 'vue-router'
 //引入组件
-import About from '../pages/About'
-import Home from '../pages/Home'
-import News from '../pages/News'
-import Message from '../pages/Message'
-import Detail from '../pages/Detail'
+import AboutQuery from '../pages/About'
+import HomeQuery from '../pages/Home'
+import NewsQuery from '../pages/News'
+import MessageQuery from '../pages/Message'
+import DetailQuery from '../pages/Detail'
 
 //创建并暴露一个路由器
 export default new VueRouter({
 	routes:[
 		{
 			path:'/about',
-			component:About
+			component:AboutQuery
 		},
 		{
 			path:'/home',
-			component:Home,
+			component:HomeQuery,
 			children:[
 				{
 					path:'news',
-					component:News,
+					component:NewsQuery,
 				},
 				{
 					path:'message',
-					component:Message,
+					component:MessageQuery,
 					children:[
 						{
 							path:'detail',
-							component:Detail,
+							component:DetailQuery,
 						}
 					]
 				}

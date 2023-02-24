@@ -16,7 +16,7 @@
 
 <script>
 	export default {
-		name:'Count_test',
+		name:'CountTest',
 		data() {
 			return {
 				n:1, //用户选择的数字

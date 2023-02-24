@@ -6,6 +6,6 @@
 
 <script>
 	export default {
-		name:'Banner'
+		name:'BannerProps'
 	}
 </script>

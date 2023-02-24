@@ -16,7 +16,7 @@
 
 <script>
 	export default {
-		name:'Count_getters',
+		name:'CountGetters',
 		data() {
 			return {
 				n:1, //用户选择的数字
@@ -38,7 +38,7 @@
 			},
 		},
 		mounted() {
-			console.log('Count_getters',this.$store)
+			console.log('CountGetters',this.$store)
 		},
 	}
 </script>

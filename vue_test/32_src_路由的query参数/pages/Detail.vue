@@ -7,8 +7,10 @@
 
 <script>
 	export default {
-		name:'Detail',
+		name:'DetailQuery',
 		mounted() {
+			// 能够得到这个组件相关的路由配置信息
+			// 其中有path query等信息 也有__proto__：Object
 			console.log(this.$route)
 		},
 	}

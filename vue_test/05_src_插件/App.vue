@@ -1,17 +1,17 @@
 <template>
 	<div>
-		<School/>
+		<SchoolPlugin/>
 		<hr>
-		<Student/>
+		<StudentPlugin/>
 	</div>
 </template>
 
 <script>
-	import School from './components/School'
-	import Student from './components/Student'
+	import SchoolPlugin from './components/School'
+	import StudentPlugin from './components/Student'
 
 	export default {
 		name:'App',
-		components:{School,Student}
+		components:{SchoolPlugin,StudentPlugin}
 	}
 </script>

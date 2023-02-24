@@ -9,7 +9,7 @@
 
 <script>
 	export default {
-		name:'News',
+		name:'NewsInterior',
 		data() {
 			return {
 				opacity:1

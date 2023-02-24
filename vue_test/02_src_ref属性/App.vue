@@ -2,20 +2,20 @@
 	<div>
 		<h1 v-text="msg" ref="title"></h1>
 		<button ref="btn" @click="showDOM">点我输出上方的DOM元素</button>
-		<School ref="sch" id="CHD"/>
+		<SchoolRef ref="sch" id="CHD"/>
 	</div>
 </template>
 
 <script>
 	//引入School组件
-	import School from './components/School'
+	import SchoolRef from './components/School'
 
 	export default {
 		name:'App',
-		components:{School},
+		components:{SchoolRef},
 		data() {
 			return {
-				msg:'欢迎学习Vue！'
+				msg:'欢迎学习Vue!'
 			}
 		},
 		methods: {

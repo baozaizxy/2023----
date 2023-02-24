@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name:'School',
+		name:'SchoolBus',
 		data() {
 			return {
 				name:'CHD',

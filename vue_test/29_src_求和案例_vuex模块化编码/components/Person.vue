@@ -16,7 +16,7 @@
 <script>
 	import {nanoid} from 'nanoid'
 	export default {
-		name:'Person_module',
+		name:'PersonModule',
 		data() {
 			return {
 				name:''

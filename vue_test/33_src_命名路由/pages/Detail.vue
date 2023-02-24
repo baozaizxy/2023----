@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name:'Detail',
+		name:'DetailName',
 		mounted() {
 			console.log(this.$route)
 		},

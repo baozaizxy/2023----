@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name:'Detail',
+		name:'DetailExclusive',
 		props:['id','title'],
 		computed: {
 			// id(){

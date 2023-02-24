@@ -1,17 +1,17 @@
 <template>
 	<div>
-		<School/>
+		<SchoolMixin/>
 		<hr>
-		<Student/>
+		<StudentMixin/>
 	</div>
 </template>
 
 <script>
-	import School from './components/School'
-	import Student from './components/Student'
+	import SchoolMixin from './components/School'
+	import StudentMixin from './components/Student'
 
 	export default {
 		name:'App',
-		components:{School,Student}
+		components:{SchoolMixin,StudentMixin}
 	}
 </script>

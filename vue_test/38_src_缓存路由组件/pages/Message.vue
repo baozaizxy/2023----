@@ -26,7 +26,7 @@
 
 <script>
 	export default {
-		name:'Message',
+		name:'MessageAlive',
 		data() {
 			return {
 				messageList:[

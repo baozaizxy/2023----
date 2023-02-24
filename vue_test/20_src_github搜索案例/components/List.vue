@@ -18,7 +18,7 @@
 
 <script>
 	export default {
-		name:'List_Component',
+		name:'ListComponent',
 		data() {
 			return {
 				info:{

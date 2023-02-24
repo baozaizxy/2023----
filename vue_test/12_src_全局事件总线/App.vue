@@ -1,18 +1,18 @@
 <template>
 	<div class="app">
 		<h1>{{msg}}</h1>
-		<School/>
-		<Student/>
+		<SchoolBus/>
+		<StudentBus/>
 	</div>
 </template>
 
 <script>
-	import Student from './components/Student'
-	import School from './components/School'
+	import StudentBus from './components/Student'
+	import SchoolBus from './components/School'
 
 	export default {
 		name:'App',
-		components:{School,Student},
+		components:{SchoolBus,StudentBus},
 		data() {
 			return {
 				msg:'你好啊！',

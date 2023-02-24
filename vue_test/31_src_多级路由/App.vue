@@ -1,7 +1,8 @@
+<!-- 写的时候 先把路由规则写好 再写跳转 匹配这些 -->
 <template>
   <div>
     <div class="row">
-      <Banner/>
+      <BannerMulti/>
     </div>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-2">
@@ -28,9 +29,9 @@
 </template>
 
 <script>
-	import Banner from './components/Banner'
+	import BannerMulti from './components/Banner'
 	export default {
 		name:'App',
-		components:{Banner}
+		components:{BannerMulti}
 	}
 </script>

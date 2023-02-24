@@ -14,6 +14,7 @@
 			<!-- <keep-alive :include="['News','Message']"> -->
 				
 			<!-- 缓存一个路由组件 -->
+			<!-- 如果保留多个组件则：<keep-alive :include="['News','Message']"> -->
 			<keep-alive include="News">
 				<router-view></router-view>
 			</keep-alive>
@@ -23,7 +24,7 @@
 
 <script>
 	export default {
-		name:'Home',
+		name:'HomeAlive',
 		/* beforeDestroy() {
 			console.log('Home组件即将被销毁了')
 		}, */

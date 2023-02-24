@@ -11,7 +11,7 @@
 <script>
 	import axios from 'axios'
 	export default {
-		name:'Search_Component',
+		name:'SearchComponent',
 		data() {
 			return {
 				keyWord:''

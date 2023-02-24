@@ -25,7 +25,7 @@
 
 <script>
 	export default {
-		name:'Message',
+		name:'MessageProps',
 		data() {
 			return {
 				messageList:[

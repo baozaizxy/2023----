@@ -10,7 +10,7 @@
 
 <script>
 	export default {
-		name:'APP_Search',
+		name:'APPSearch',
 		data() {
 			return {
 				keyWord:''

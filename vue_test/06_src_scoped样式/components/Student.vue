@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name:'Student',
+		name:'StudentScoped',
 		data() {
 			return {
 				name:'张三',

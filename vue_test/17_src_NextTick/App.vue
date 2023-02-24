@@ -1,18 +1,18 @@
 <template>
 	<div>
-		<Test_one/>
-		<Test_two/>
-		<Test_three/>
+		<TestOne/>
+		<TestTwo/>
+		<TestThree/>
 	</div>
 </template>
 
 <script>
-	import Test_one from './components/Test'
-	import Test_two from './components/Test2'
-	import Test_three from './components/Test3'
+	import TestOne from './components/Test'
+	import TestTwo from './components/Test2'
+	import TestThree from './components/Test3'
 
 	export default {
 		name:'App',
-		components:{Test_one,Test_two, Test_three},
+		components:{TestOne,TestTwo, TestThree},
 	}
 </script>

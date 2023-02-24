@@ -2,7 +2,7 @@
 <template>
 	<div class="container">
 
-		<Category_three title="游戏">
+		<CategoryThree title="游戏">
 			<!-- 这里必须加template -->
 			<template scope="sherry">
 				<!-- 先收到sherry对象 再得到属性 -->
@@ -11,30 +11,30 @@
 					<li v-for="(g,index) in sherry.games" :key="index">{{g}}</li>
 				</ul>
 			</template>
-		</Category_three>
+		</CategoryThree>
 
-		<Category_three title="游戏">
+		<CategoryThree title="游戏">
 			<template scope="{games}">
 				<ol>
 					<li style="color:red" v-for="(g,index) in games" :key="index">{{g}}</li>
 				</ol>
 			</template>
-		</Category_three>
+		</CategoryThree>
 
-		<Category_three title="游戏">
+		<CategoryThree title="游戏">
 			<template slot-scope="{games}">
 				<h4 v-for="(g,index) in games" :key="index">{{g}}</h4>
 			</template>
-		</Category_three>
+		</CategoryThree>
 
 	</div>
 </template>
 
 <script>
-	import Category_three from './components/Category'
+	import CategoryThree from './components/Category'
 	export default {
 		name:'App',
-		components:{Category_three},
+		components:{CategoryThree},
 	}
 </script>
 

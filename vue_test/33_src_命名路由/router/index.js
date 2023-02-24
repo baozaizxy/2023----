@@ -1,11 +1,11 @@
 // 该文件专门用于创建整个应用的路由器
 import VueRouter from 'vue-router'
 //引入组件
-import About from '../pages/About'
-import Home from '../pages/Home'
-import News from '../pages/News'
-import Message from '../pages/Message'
-import Detail from '../pages/Detail'
+import AboutName from '../pages/About'
+import HomeName from '../pages/Home'
+import NewsName from '../pages/News'
+import MessageName from '../pages/Message'
+import DetailName from '../pages/Detail'
 
 //创建并暴露一个路由器
 export default new VueRouter({
@@ -13,24 +13,24 @@ export default new VueRouter({
 		{
 			name:'guanyu',
 			path:'/about',
-			component:About
+			component:AboutName
 		},
 		{
 			path:'/home',
-			component:Home,
+			component:HomeName,
 			children:[
 				{
 					path:'news',
-					component:News,
+					component:NewsName,
 				},
 				{
 					path:'message',
-					component:Message,
+					component:MessageName,
 					children:[
 						{
 							name:'xiangqing',
 							path:'detail',
-							component:Detail,
+							component:DetailName,
 						}
 					]
 				}

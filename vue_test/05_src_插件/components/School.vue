@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		name:'School',
+		name:'SchoolPlugin',
 		data() {
 			return {
 				name:'长安大学CHD',

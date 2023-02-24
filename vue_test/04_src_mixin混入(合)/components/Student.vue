@@ -9,7 +9,7 @@
 	// import {hunhe,hunhe2} from '../mixin'
 
 	export default {
-		name:'Student',
+		name:'StudentMixin',
 		data() {
 			return {
 				name:'张三',

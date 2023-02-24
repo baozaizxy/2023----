@@ -9,7 +9,7 @@
 <script>
 	import pubsub from 'pubsub-js'
 	export default {
-		name:'Student',
+		name:'StudentPubsub',
 		data() {
 			return {
 				name:'张三',

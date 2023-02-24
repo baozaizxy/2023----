@@ -8,6 +8,7 @@
     </div>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-2">
+        <!-- 写好class类的作用:给bootstrap识别 渲染style -->
         <div class="list-group">
 					<!-- 原始html中我们使用a标签实现页面的跳转 -->
           <!-- active在哪 哪就highlight -->

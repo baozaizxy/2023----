@@ -8,6 +8,6 @@
 
 <script>
 	export default {
-		name:'News'
+		name:'NewsReplace'
 	}
 </script>

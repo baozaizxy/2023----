@@ -4,6 +4,7 @@
 		<div>
 			<ul class="nav nav-tabs">
 				<li>
+					<!-- 相比于a标签 此处不给任何人加active 用一个active属性 -->
 					<router-link class="list-group-item" active-class="active" to="/home/news">News</router-link>
 				</li>
 				<li>
@@ -17,7 +18,7 @@
 
 <script>
 	export default {
-		name:'Home',
+		name:'HomeMulti',
 		/* beforeDestroy() {
 			console.log('Home组件即将被销毁了')
 		}, */

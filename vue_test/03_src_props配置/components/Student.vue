@@ -10,7 +10,7 @@
 
 <script>
 	export default {
-		name:'Student',
+		name:'StudentProps',
 		data() {
 			console.log(this)
 			return {

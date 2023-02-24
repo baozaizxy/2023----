@@ -9,7 +9,7 @@
 
 <script>
 	export default {
-		name:'Category_two',
+		name:'CategorytTwo',
 		props:['title']
 	}
 </script>

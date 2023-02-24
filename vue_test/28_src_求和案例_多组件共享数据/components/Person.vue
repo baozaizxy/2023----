@@ -13,7 +13,7 @@
 <script>
 	import {nanoid} from 'nanoid'
 	export default {
-		name:'Person_multi',
+		name:'PersonMulti',
 		data() {
 			return {
 				name:''

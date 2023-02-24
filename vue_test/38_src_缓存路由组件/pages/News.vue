@@ -8,7 +8,7 @@
 
 <script>
 	export default {
-		name:'News',
+		name:'NewsAlive',
 		beforeDestroy() {
 			console.log('News组件即将被销毁了')
 		},

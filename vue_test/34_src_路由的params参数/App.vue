@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="row">
-      <Banner/>
+      <BannerParams/>
     </div>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-2">
@@ -28,9 +28,9 @@
 </template>
 
 <script>
-	import Banner from './components/Banner'
+	import BannerParams from './components/Banner'
 	export default {
 		name:'App',
-		components:{Banner}
+		components:{BannerParams}
 	}
 </script>

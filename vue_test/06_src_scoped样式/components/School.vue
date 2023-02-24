@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name:'School',
+		name:'SchoolScoped',
 		data() {
 			return {
 				name:'长安大学CHD',

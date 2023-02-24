@@ -7,7 +7,7 @@
 
 <script>
 	export default {
-		name:'Detail',
+		name:'DetailMeta',
 		props:['id','title'],
 		computed: {
 			// id(){

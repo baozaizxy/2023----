@@ -10,7 +10,7 @@
 
 <script>
 	export default {
-		name:'Test_two',
+		name:'TestTwo',
 		data() {
 			return {
 				isShow:true
