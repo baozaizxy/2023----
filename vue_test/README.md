@@ -1095,3 +1095,17 @@ dist是build打包后生成的
 打包后放在服务器上部署
 
 node server 服务器启动成功
+
+组件库：
+
+1、基于什么框架
+
+2、PC端 移动端
+
+vue框架下常用的PC端组件库：ElementUI
+
+ElementUI是vue里的插件库
+
+-D是开发依赖
+
+引入方式
