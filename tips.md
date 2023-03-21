@@ -89,3 +89,93 @@ mode是指文件访问方式.
 一般创建文件使用 touch
 
 创建文件夹使用mkdir
+
+
+
+微信小程序是通过路由进行跳转到单页面应用
+
+JS Math.min无参时为infinity Math.max无参时返回-Infinity
+
+
+
+iframe缺点：阻塞主页面onload事件	iframe和主页面共享连接池，浏览器对相同域的连接有限制，会影响页面的并行加载	用户体验差	搜索引擎的爬虫不能很好的处理iframe因此无法被一些搜索引擎搜索到
+
+
+
+HTML5语义化
+
+通俗来讲就是从代码上来展示页面的结构，而不是从最终视觉上来展示
+
+优点：
+
+易于阅读 样式丢失的时候页面能够呈现清晰的结构
+
+有利于SEO 搜索引擎根据标签来确定权重
+
+有利于开发和维护
+
+
+
+H5新特性：
+
+document.querySelector返回匹配指定选择器的第一个元素、
+
+document.querySelectorAll返回NodeList伪数组
+
+
+
+href和src
+
+href（Hypertext Reference）超文本引用，用来建立当前元素和文档之间的连接。常用有link、[a标签](https://so.csdn.net/so/search?q=a标签&spm=1001.2101.3001.7020)等。当它引用资源时，浏览器会将其识别为CSS文档，并行下载资源并且不会停止对当前文档的处理。
+
+src（Source）会将指向的资源下载并引用到当前的文档中，常用标签有script、img、ifram等。它会替换掉当前的元素。当浏览器解析src时，会暂停其他资源的下载和处理，直接将该资源下载、编译、执行完毕。
+
+
+
+svg和Canvas
+
+svg绘制出的每一个图形都是独立的DOM结点，绑定事件或者修饰的时候更加方便
+
+svg输出的是矢量图形，后期可以自由修改参数放大缩小不会失真和锯齿，画布输出的是标量画布，像一张图片，会失真和锯齿
+
+
+
+CSS动画的缺点：兼容性不好及在动画控制上不够灵活，无法加回调函数绑定事件之类的，可以用js的动画弥补这样的缺点
+
+
+
+常见的meta标签：
+
+charset/author/keywords/description/viewport/theme-color等
+
+
+
+label标签的作用：用来定义表单件的控制关系，当点击标签时，浏览器会自动将焦点转移到和标签相关的表单控件上
+
+
+
+常见的内联元素：
+
+a/span/br/i/em/strong/label/q/var/code/cite
+
+常见的内联块：
+
+img/input
+
+
+
+阻止a标签跳转的方式：
+
+1、href:javascripy:;	2、return false	3、Event.preventDefault()	4、pointer-events:none(CSS)
+
+
+
+title属性为设置该属性的元素提供建议性的、非本质的信息
+
+
+
+设计模式：工厂模式、构造函数模式、观察者模式
+
+
+
+NodeList对象是dom节点的集合。`document.querySelectorAll(selector)`和`Node.childNodes`返回的都是NodeList对象，看着很像数组，却没有数组的方法。

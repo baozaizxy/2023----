@@ -1,5 +1,6 @@
 <!-- 连续获取vuex中state中和getter中多个值有些冗余 因此出现mapState和mapGetter应运而生 -->
 <!-- 这种方法获得的数据开发者工具不视为computed 开发者工具视为vuex bindings -->
+
 <template>
 	<div>
 		<h1>当前求和为：{{sum}}</h1>

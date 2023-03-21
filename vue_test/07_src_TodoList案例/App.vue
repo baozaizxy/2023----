@@ -46,8 +46,7 @@
 			},
 			//删除一个todo
 			deleteTodo(id){
-				// filter函数也可以删除 请复习如何实现 this.todos = this.todos.filter(todo => todo.id !== id) 
-				// 但是filter方法不改变原数组（不改变原数组的方法有？）
+				// 但是filter方法不改变原数组
 				this.todos = this.todos.filter( todo => todo.id !== id )
 			},
 			//全选or取消全选

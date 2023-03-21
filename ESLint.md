@@ -39,3 +39,13 @@ npm run lint
 2. ctrl+s保存时立即自动修正错误
 
 用vscode打开项目时，将脚手架工程作为vscode根目录, 因为eslint要使用配置文件.eslintrc
+
+
+
+js两种情况下不加分号会有问题:
+
+小括号开头前的一条语句，中括号开头前的一条语句
+
+[1,3].forEach(function(){})
+
+解决方案：在行首加分号
